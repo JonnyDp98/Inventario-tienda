@@ -43,3 +43,6 @@ python main.py
 
 **Jonathan Romero**
 
+**Nota Extra para el uso**
+Para las cuentas admin ingresar la contraseña: Admin123!   y para los usuarios comunes usar Usuario123!
+
