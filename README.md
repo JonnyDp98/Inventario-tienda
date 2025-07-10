@@ -8,7 +8,7 @@ El sistema permite realizar operaciones de **alta, baja, modificación y búsque
 
 ---
 
-## 💻 Tecnologías y librerías utilizadas
+## 💻 Librerías utilizadas
 
 - "sqlite3": para la gestión de la base de datos local.(Estandar en Python)
 - "datetime": para el manejo de fechas y tiempos.(Estandar en Python)
