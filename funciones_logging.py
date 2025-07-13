@@ -449,7 +449,7 @@ def validar_credenciales():
                     intentos += 1
                     mensaje = "Contraseña incorrecta"
                 else:
-                    intentos +,= 1
+                    intentos += 1
                     mensaje = "Usuario no encontrado"
 
             registrar_log(usuario, mensaje)
