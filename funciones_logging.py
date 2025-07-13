@@ -446,8 +446,10 @@ def validar_credenciales():
                 return rol
             else:
                 if nombre:
+                    intentos += 1
                     mensaje = "Contraseña incorrecta"
                 else:
+                    intentos +,= 1
                     mensaje = "Usuario no encontrado"
 
             registrar_log(usuario, mensaje)
