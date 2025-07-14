@@ -9,7 +9,7 @@ def conexion():
     """
     Establece una conexión con la base de datos 'inventario.db'.
 
-    Returns:
+    Retorna:
         Una tupla (conexion, cursor) si la conexión es exitosa.
         En caso de error, retorna (None, None).
     """
@@ -32,7 +32,7 @@ def validar_menu(opcion):
     Args:
         opcion (str): Opción ingresada por el usuario.
 
-    Returns:
+    Retorna:
         int: La opción convertida a entero si es válida (1 o 2).
              En caso contrario, imprime un mensaje y no retorna nada.
     """
@@ -63,7 +63,7 @@ def validar_contraseña(password):
     Args:
         password (str): La contraseña a validar.
 
-    Returns:
+    Retorna:
         list: Lista de errores si la contraseña no cumple los requisitos.
         str: Contraseña hasheada si es válida.
     """
@@ -104,7 +104,7 @@ def validar_direccion(direccion):
     Args:
         direccion (str): Dirección ingresada.
 
-    Returns:
+    Retorna:
         list: Lista de errores si la dirección no es válida.
         str: Dirección válida si no hay errores.
     """
@@ -132,7 +132,7 @@ def pedir_email(cur):
     Args:
         cur (sqlite3.Cursor): Cursor para consultar la base de datos.
 
-    Returns:
+    Returna:
         str: Email válido y no registrado.
         None: Si el usuario decide salir.
     """
@@ -162,7 +162,7 @@ def pedir_nombre():
         - No vacío
         - Solo letras y espacios permitidos
 
-    Returns:
+    Retorna:
         str: Nombre validado y limpio.
         None: Si el usuario decide salir.
     """
@@ -189,7 +189,7 @@ def pedir_contraseña():
 
     Muestra los requisitos y repite hasta que la contraseña sea válida.
 
-    Returns:
+    Retorna:
         str: Contraseña hasheada válida.
     """
     continuar_contraseña= True
@@ -214,7 +214,7 @@ def pedir_direccion():
     El ciclo se repite hasta que el usuario proporciona una dirección sin errores de validación.
     Si se detectan errores, se muestran en rojo utilizando la librería `colorama`.
 
-    Returns:
+    Retorna:
         str: Una dirección válida proporcionada por el usuario.
         """
     continuar_direccion= True
@@ -237,7 +237,7 @@ def pedir_edad():
     y mayor o igual a 18 años. Si el valor ingresado no es un número o es menor a 18, se muestra
     un mensaje de error.
 
-    Returns:
+    Retorna:
         int: Edad válida ingresada por el usuario (mayor o igual a 18).
     """
     continuar_edad= True
@@ -264,7 +264,7 @@ def inputs_crear():
     la información requerida para un registro, incluyendo email, nombre, contraseña,
     dirección, edad, y fecha de registro. También establece el rol por defecto como "usuario".
 
-    Returns:
+    Retorna:
         tupla o None: Una tupla con los siguientes valores si se completan correctamente:
             (usuario, nombre, contraseña, direccion, edad, fecha_registro, rol),
              `None` si ocurre un error de conexión o si el email ya está registrado.
@@ -338,7 +338,7 @@ def solicitar_email():
     Verifica que el email no esté vacío, no contenga caracteres inválidos, 
     y cumpla con un formato básico. El usuario puede escribir 'salir' para cancelar.
 
-    Returns:
+    Retorna:
         str o None: El correo electrónico ingresado si es válido, o None si el usuario decide salir.
         """
     continuar_email= True
@@ -362,7 +362,7 @@ def solicitar_contraseña():
 
     Verifica que no esté vacía. El usuario puede escribir 'salir' para cancelar.
 
-    Returns:
+    Retorna:
         str or None: La contraseña si es válida, o None si el usuario decide salir.
         """
     continuar_contraseña= True
@@ -388,7 +388,7 @@ def verificar_credenciales(cur, usuario, contraseña):
     Verifica que el email no esté vacío, no contenga caracteres inválidos, 
     y cumpla con un formato básico. El usuario puede escribir 'salir' para cancelar.
 
-    Returns:
+    Retorna:
         str or None: El correo electrónico ingresado si es válido, o None si el usuario decide salir.
         """
     
@@ -419,7 +419,7 @@ def validar_credenciales():
     Solicita correo y contraseña, los valida contra la base de datos, y permite
     un máximo de 3 intentos. Registra eventos de fallos y salidas voluntarias.
 
-    Returns:
+    Returna:
         str or None: El rol del usuario si el inicio de sesión es exitoso, o None si falla o se cancela.
 """
     intentos = 0
