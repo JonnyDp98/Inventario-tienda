@@ -496,7 +496,7 @@ def buscar_id_usuario():
         """
     continuar_id= True
     while continuar_id:
-        id_producto= input("Escriba la id a buscar: ")
+        id= input("Escriba la id a buscar: ")
         try:#IMPLEMENTACION DE TRY/EXCEPT COMO DECIA EL FEEDBACK
             id= int(id_producto)
             if id_producto <= 0:
