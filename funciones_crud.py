@@ -436,7 +436,7 @@ def verificar_stock():
                         query = f"SELECT * FROM productos WHERE cantidad {operador} ?"
                         cur.execute(query, (cantidad,))
                         resultados = cur.fetchall()
-                        print(tabulate(resultados, headers=["ID", "Nombre", "Descripcion", "Categoria", "Precio", "Categoria"], tablefmt="double_grid"))
+                        print(tabulate(resultados, headers=["ID", "Nombre", "Descripcion", "Cantidad", "Precio", "Categoria"], tablefmt="double_grid"))
                         return resultados
                     except sqlite3.Error as error:
                         print(f"Error en la base de datos {error}")
